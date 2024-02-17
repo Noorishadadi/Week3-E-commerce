@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-commerce Product Carousel</title>
+  <style>
+    /* Basic styles */
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f2f2f2;
+    }
+
+    header, main, footer {
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Product section styles */
+    .product-carousel {
+      display: flex;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      white-space: nowrap;
+    }
+
+    .product-card {
+      width: 250px;
+      margin: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      scroll-snap-align: start;
+    }
+
+    .product-image {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .product-name {
+      font-size: 18px;
+      margin-top: 20px;
+    }
+
+    .product-description {
+      margin-top: 10px;
+      color: #777;
+    }
+
+    .product-price {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .cta-button {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    /* Colors for each product card */
+    .product-card:nth-child(1) {
+      background-color: #f7f7f7;
+    }
+
+    .product-card:nth-child(2) {
+      background-color: #f2f2f2;
+    }
+
+    .product-card:nth-child(3) {
+      background-color: #eee;
+    }
+
+    .product-card:nth-child(4) {
+      background-color: #fff;
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .product-carousel {
+        flex-direction: column;
+      }
+
+      .product-card {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+  <h1>Product Name</h1>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <main>
+    <div class="product-carousel">
+      <div class="product-card">
+        <img src="eyeliner.png" alt="Product 1 Image" class="product-image">
+        <h3 class="product-name">eyeliner</h3>
+        <p class="product-description">Black and iconic</p>
+        <p class="product-price">200Rs</p>
+        <button class="cta-button">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="lipstick.png" alt="Product 2 Image" class="product-image">
+        <h3 class="product-name">Lipstick</h3>
+        <p class="product-description">Matt Finish look</p>
+        <p class="product-price">500Rs</p>
+        <button class="cta-button">Add to Cart</button>
+      </div>
+      <div class="product-card">
+              <img src="eye shadow.png" alt="Product 3 Image" class="product-image">
+        <h3 class="product-name">Eye Shadow</h3>
+        <p class="product-description">Make your eyes more beautiful</p>
+        <p class="product-price">635Rs</p>
+        <button class="cta-button">Add to Cart</button>
+      </div>
+      <!-- Add more product cards here if needed -->
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2024 E-commerce Store. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
+
